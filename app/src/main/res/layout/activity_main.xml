@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hq.toyou.MainActivity">
+
+
+
+
+   <com.hq.toyou.heartview.HeartView
+        android:id="@+id/heartView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.github.glomadrian.grav.GravView
+        android:id="@+id/grav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+        app:array_colors="@array/bubble"
+        app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+        app:regular_cell_size="300"
+        app:regular_variance="200"
+        app:gravGenerator="com.github.glomadrian.grav.generator.grav.BallGenerator"
+        app:ball_from_size="10dp"
+        app:ball_to_size="20dp"
+        app:animationGenerators="@array/BubbleAnimations"
+        app:side_to_side_min_duration="10000"
+        app:side_to_side_max_duration="10000"
+        app:side_to_side_direction="leftToRight"
+        app:shake_direction="vertical"
+        app:shake_min_duration="10000"
+        app:shake_max_duration="20000"
+        app:shake_variance="500dp"/>
+
+
+    <com.linroid.filtermenu.library.FilterMenuLayout
+        android:id="@+id/filter_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        custom:fm_expandedRadius="90dp"
+        custom:fm_collapsedRadius="20dp"
+        custom:fm_centerHorizontal="true"
+        custom:fm_centerBottom="40dp"
+        custom:fm_primaryColor="#FF69B4"
+        custom:fm_primaryDarkColor="#00FFFF">
+    </com.linroid.filtermenu.library.FilterMenuLayout>
+
+    <com.dk.view.patheffect.PathTextView
+        android:id="@+id/path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="150dp"/>
+
+</FrameLayout>
